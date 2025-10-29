@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Days since Andy was late to work</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 15%;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.3em;
+    }
+    p {
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="counter"></h1>
+  <p id="date"></p>
+
+  <script>
+    // Set the date of the event
+    const eventDate = new Date("2024-09-15"); // change this date
+
+    function updateCounter() {
+      const now = new Date();
+      const diffTime = now - eventDate;
+      const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+      
+      document.getElementById("counter").textContent =
+        `${diffDays} days since Andy was late to work 😅`;
+      
+      document.getElementById("date").textContent =
+        `Last updated: ${now.toDateString()}`;
+    }
+
+    // Update immediately
+    updateCounter();
+
+    // Optional: refresh every hour, just in case someone leaves it open
+    setInterval(updateCounter, 60 * 60 * 1000);
+  </script>
+</body>
+</html>
