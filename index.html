@@ -74,10 +74,19 @@ Igatahes liiga mitu!! Siin on väike neljajalgse kolleegi inspo (kui Sul leidub 
 
 
 <div style="text-align:center; margin-top: 20px;">
-  <button id="paiButton" style="padding: 10px 20px; font-size: 1.2em; cursor: pointer; border-radius: 8px; background-color: #ffdede; border: none;">
+  <button id="paiButton" style="
+    padding: 10px 20px; 
+    font-size: 1.2em; 
+    cursor: pointer; 
+    border-radius: 8px; 
+    background-color: #ffdede; 
+    border: none; 
+    color: #333333; 
+    font-family: 'Poppins', sans-serif;
+  ">
     Saada pai kolleegile 🐾
   </button>
-  <p id="paiMessage" style="font-size: 1.5em; margin-top: 15px;"></p>
+  <p id="paiMessage" style="font-size: 1em; margin-top: 15px; color: #aaaaaa; font-family: 'Poppins', sans-serif;"></p>
 </div>
 
 <script>
@@ -86,13 +95,14 @@ Igatahes liiga mitu!! Siin on väike neljajalgse kolleegi inspo (kui Sul leidub 
 
   button.addEventListener('click', () => {
     message.textContent = "Pai saadetud! 🐶🐱";
-    // optional: add a quick animation
+    // quick scale animation
     message.style.transform = "scale(1.2)";
     setTimeout(() => {
       message.style.transform = "scale(1)";
     }, 300);
   });
 </script>
+
 
 
 
